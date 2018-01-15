@@ -28,6 +28,6 @@ class PostsController < ApplicationController
 		@post.title = params[:title]
 		@post.description = params[:description]
 		@post.save
-		raise params.inspect
+		redirect_to post_path(@post)
 	end
 end
